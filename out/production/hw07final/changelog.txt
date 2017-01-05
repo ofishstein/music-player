@@ -1,0 +1,20 @@
+Change Log:
+
+-Fixed a bug where a song with a repeat/end/repeatend would have
+ minimum octave of 0 by default.
+ 	- added (if note instanceof Note) to getMaxOctave and getMinOctave of Chord.java
+
+
+-Fixed a bug where the end repeat lines were printed at the beginning of the beat in GuiPanelImpl
+-Adjusted where ending line was drawn so that it wasn't obscured by end repeat lines in GuiPanelImpl
+-Added flag setting for repeat to GUIViewImpl in playNoteAtBeat
+-Added methods to GUIView, GuiViewImpl, and CombinedViewImpl to retrieve the flags from GuiViewImpl
+-Added repeating functionality to PlaySong in ControllerImpl works for both GuiViewImpl and
+ CombinedViewImpl
+-Updated README to reflect added key bindings for adding octaves, resetting octaves, adding
+ measures, subbing measures, and additional home/end keys in h/e
+
+ TODO:
+ -Add controller functionality to add repeats and endings
+ -Add visual representation of repeats and endings to ConsoleViewImpl
+    -Have ideas
